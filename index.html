@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Login Form</title>
+  <style>
+    /* Base style for the body, centering content and setting a background image */
+    body {
+      font-family: Arial, sans-serif; /* Sets a clean, readable font */
+      background: url('http://www.pixelstalk.net/wp-content/uploads/2016/07/HD-Peaceful-Backgrounds.jpg'); /* Background image */
+      background-size: cover; /* Ensures the image covers the entire background */
+      background-position: center; /* Centers the background image */
+      display: flex; /* Enables flexbox for centering the login form */
+      justify-content: center; /* Centers horizontally */
+      align-items: center; /* Centers vertically */
+      height: 100vh; /* Full viewport height */
+      margin: 0; /* Removes default margin */
+    }
+
+    /* Styles for the login form container */
+    .login-form {
+      background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+      padding: 40px; /* Space inside the container */
+      border-radius: 15px; /* Smooth, rounded corners */
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
+      text-align: center; /* Center-aligns the text inside the container */
+      width: 320px; /* Sets a fixed width for the form */
+      animation: fadeIn 1s ease-in-out; /* Fades the form in on load */
+      backdrop-filter: blur(10px); /* Adds a subtle blur effect to the background */
+    }
+
+    /* Style for the form heading */
+    .login-form h2 {
+      margin-bottom: 20px; /* Space below the heading */
+      color: #333; /* Dark text color */
+      font-size: 24px; /* Larger font size */
+    }
+
+    /* Styles for the input fields */
+    .login-form input {
+      width: 100%; /* Full width */
+      padding: 12px; /* Space inside the input */
+      margin-bottom: 15px; /* Space below each input */
+      border: none; /* Removes the default border */
+      border-radius: 8px; /* Rounded corners */
+      background: #f0f0f0; /* Light gray background for inputs */
+      font-size: 16px; /* Text size */
+      color: #333; /* Dark text color */
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1); /* Inner shadow for a 3D effect */
+      transition: background 0.3s ease; /* Smooth background transition on focus */
+    }
+
+    /* Changes the background color on input focus */
+    .login-form input:focus {
+      background: #e0e0e0; /* Slightly darker background on focus */
+      outline: none; /* Removes default outline */
+    }
+
+    /* Styles for the login button */
+    .login-form button {
+      width: 100%; /* Full width */
+      padding: 12px; /* Space inside the button */
+      background: linear-gradient(135deg, #6a11cb, #2575fc); /* Gradient background */
+      color: white; /* White text color */
+      border: none; /* Removes the default border */
+      border-radius: 8px; /* Rounded corners */
+      cursor: pointer; /* Changes cursor to pointer on hover */
+      font-size: 16px; /* Larger text size for visibility */
+      font-weight: bold; /* Bold text */
+      transition: transform 0.2s ease, background 0.3s ease; /* Adds smooth transitions */
+    }
+
+    /* Adds a hover effect for the button */
+    .login-form button:hover {
+      background: linear-gradient(135deg, #4a00e0, #8e2de2); /* Darker gradient on hover */
+      transform: translateY(-3px); /* Raises the button on hover */
+    }
+
+    /* Adds a click (active) effect for the button */
+    .login-form button:active {
+      transform: translateY(1px); /* Slightly lowers the button on click */
+    }
+
+    /* Animation for form fade-in effect */
+    @keyframes fadeIn {
+      from {
+        opacity: 0; /* Starts from invisible */
+        transform: translateY(-20px); /* Starts from slightly above */
+      }
+      to {
+        opacity: 1; /* Ends fully visible */
+        transform: translateY(0); /* Ends at the original position */
+      }
+    }
+
+    /* Style for the additional links (Forgot Password and Sign Up) */
+    .login-form p {
+      margin-top: 15px; /* Space above the paragraph */
+      font-size: 14px; /* Smaller text */
+      color: #666; /* Lighter text color */
+    }
+
+    /* Style for anchor links */
+    .login-form p a {
+      color: #2575fc; /* Bright link color */
+      text-decoration: none; /* Removes underline */
+      font-weight: bold; /* Bold for emphasis */
+      transition: color 0.3s ease; /* Smooth color transition on hover */
+    }
+
+    /* Hover effect for the anchor links */
+    .login-form p a:hover {
+      color: #6a11cb; /* Changes color on hover */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Login form container -->
+  <div class="login-form">
+    <h2>Login</h2> <!-- Form heading -->
+
+    <!-- Username input field -->
+    <input type="text" placeholder="Username" required>
+
+    <!-- Password input field -->
+    <input type="password" placeholder="Password" required>
+
+    <!-- Login button -->
+    <button>Login</button>
+
+    <!-- Links for forgot password and sign-up options -->
+    <p><a href="#">Forgot Password?</a></p>
+    <p><a href="#">Sign Up</a></p>
+  </div>
+
+</body>
+</html>
